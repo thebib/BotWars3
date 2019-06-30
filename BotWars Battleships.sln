@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotWars Battleships", "BotWars Battleships\BotWars Battleships.csproj", "{295688AE-1B0D-4795-A874-B6DAC6CA369E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{295688AE-1B0D-4795-A874-B6DAC6CA369E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{295688AE-1B0D-4795-A874-B6DAC6CA369E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{295688AE-1B0D-4795-A874-B6DAC6CA369E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{295688AE-1B0D-4795-A874-B6DAC6CA369E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {436B6203-0731-4ADE-9DDE-E30D347C18FB}
+	EndGlobalSection
+EndGlobal
