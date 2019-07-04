@@ -32,9 +32,10 @@ namespace BotWars_Battleships
 
             g.FillPolygon(new SolidBrush(Color.Blue), Square);
 
-            
+            int arenaSize = 10;
+            float Seasize = 1.0f / arenaSize;
 
-            for(float i = 0; i < 1.0f; i = i + 0.1428571428571429f)
+            for(float i = 0; i < 1.0f; i = i + Seasize)
             {
                 PointF t1 = Fraction(i, Square[0], Square[1]);
                 PointF b1 = Fraction(i, Square[3], Square[2]);

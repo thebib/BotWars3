@@ -24,11 +24,11 @@ namespace BotWars_Battleships
             while (true)
             {    
                 var context = await listener.GetContextAsync();
-                ProcessMessage(context);
+                ProcessIncomingMessage(context);
             }
         }
 
-        private void ProcessMessage(HttpListenerContext context)
+        private void ProcessIncomingMessage(HttpListenerContext context)
         {
             var body = new StreamReader(context.Request.InputStream).ReadToEnd();
         }
