@@ -55,6 +55,7 @@
     <Compile Include="GameManager.cs" />
     <Compile Include="GameObjects\Ship.cs" />
     <Compile Include="GameObjects\Tile.cs" />
+    <Compile Include="GameOptions.cs" />
     <Compile Include="Games.cs" />
     <Compile Include="Players.cs" />
     <Compile Include="Program.cs" />
