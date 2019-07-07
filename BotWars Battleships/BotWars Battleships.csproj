@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Battlefield\Battlefield.cs" />
+    <Compile Include="Battlefield\Boat\IBoat.cs" />
+    <Compile Include="Battlefield\Tile.cs" />
     <Compile Include="GameForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,10 +56,17 @@
       <DependentUpon>GameForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GameManager.cs" />
-    <Compile Include="Games.cs" />
-    <Compile Include="Players.cs" />
+    <Compile Include="Game\GameResult.cs" />
+    <Compile Include="Game\IGame.cs" />
+    <Compile Include="Player\Moves\Bomb.cs" />
+    <Compile Include="Player\Moves\IMove.cs" />
+    <Compile Include="Player\MoveResult\MoveResult.cs" />
+    <Compile Include="Player\IPlayer.cs" />
+    <Compile Include="Player\Moves\Reload.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Round\Round.cs" />
+    <Compile Include="Round\RoundResult.cs" />
     <Compile Include="Tiles.cs" />
     <EmbeddedResource Include="GameForm.resx">
       <DependentUpon>GameForm.cs</DependentUpon>
@@ -82,6 +92,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Player\BotPlayers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

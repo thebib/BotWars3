@@ -9,17 +9,17 @@ namespace BotWars_Battleships
     public class GameManager
     {
         public IGame ActiveGame;
-        public List<IPlayers> AvailablePlayers;
+        public List<IPlayer> AvailablePlayers;
         public HttpListener listener;
         
         public GameManager()
         {
             listener = new HttpListener();
-            listener.Prefixes.Add("http://localhost:7000/");
+            listener.Prefixes.Add("http://localhost:7000/playerregistration/");
             listener.Start();
         }
 
-        public async Task Communications()
+        public async Task PlayerRegisterCommunications()
         {
             while (true)
             {    
