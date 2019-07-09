@@ -16,7 +16,7 @@ namespace BotWars_Battleships
         public GameForm(GameManager manager)
         {
             //Tell the Game Manager to Open Comms
-            Task t = manager.Communications();
+            Task t = manager.PlayerRegisterCommunications();
             InitializeComponent();
         }
 
@@ -29,7 +29,7 @@ namespace BotWars_Battleships
             new Point(pictureBox1.Width / 2,pictureBox1.Height ),
             new Point(0, pictureBox1.Height / 2)
             };
-
+            g.FillRectangle(new SolidBrush(Color.Black), 0, 0, pictureBox1.Width, pictureBox1.Height);
             g.FillPolygon(new SolidBrush(Color.Blue), Square);
 
             int arenaSize = 10;

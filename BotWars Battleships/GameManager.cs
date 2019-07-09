@@ -9,27 +9,26 @@ namespace BotWars_Battleships
     public class GameManager
     {
         public IGame ActiveGame;
-        public List<IPlayers> AvailablePlayers;
-        public HttpListener PlayerRegistrationListener;
-        public GameOptions options;
+        public List<IPlayer> AvailablePlayers;
+        public HttpListener listener;
         
         public GameManager()
         {
-            PlayerRegistrationListener = new HttpListener();
-            PlayerRegistrationListener.Prefixes.Add("http://localhost:7000/register/");
-            PlayerRegistrationListener.Start();
+            listener = new HttpListener();
+            listener.Prefixes.Add("http://localhost:7000/playerregistration/");
+            listener.Start();
         }
 
-        public async Task Communications()
+        public async Task PlayerRegisterCommunications()
         {
             while (true)
             {    
-                var context = await PlayerRegistrationListener.GetContextAsync();
-                ProcessIncomingMessage(context);
+                var context = await listener.GetContextAsync();
+                ProcessMessage(context);
             }
         }
 
-        private void ProcessIncomingMessage(HttpListenerContext context)
+        private void ProcessMessage(HttpListenerContext context)
         {
             var body = new StreamReader(context.Request.InputStream).ReadToEnd();
         }
